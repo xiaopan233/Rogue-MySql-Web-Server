@@ -146,6 +146,8 @@ class http_request_handler(asynchat.async_chat):
                 self.state = 'Data'
         elif self.state == 'Data':
             packet = mysql_packet.parse(data)
+
+
             try:
                 if self.order != packet.packet_num:
                     raise OutOfOrder()
@@ -155,6 +157,8 @@ class http_request_handler(asynchat.async_chat):
                 if packet.packet_num == 0:
                     if packet.payload[0] == '\x03':
                         log.info('Query')
+                        # Change 1
+                        log.info("packet payload ----------------\n" + packet.payload)
 
                         filename = random.choice(filelist)
                         PACKET = mysql_packet(
@@ -186,6 +190,8 @@ class http_request_handler(asynchat.async_chat):
                     if self.sub_state == 'File':
                         log.info('-- result')
                         log.info('Result: %r', data)
+                        # Change 2
+                        log.info('--------------result off--------------')
 
                         if len(data) == 1:
                             self.push(
