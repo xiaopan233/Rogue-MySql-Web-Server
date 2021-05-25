@@ -11,7 +11,7 @@ import logging
 import logging.handlers
 
 
-
+#Set Rogue Mysql Server bind port
 PORT = 3308
 
 log = logging.getLogger(__name__)
