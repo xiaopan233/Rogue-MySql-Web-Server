@@ -16,7 +16,7 @@ Web Server log file is "rms_server_log.txt"
 # Change:
 I have modified "rogue_mysql_server.py".Add two log output: 
 
-
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/2-4.png" width=800>
 
 Remote user or auto exp script can use regexp to match the content via the "Content Begin Flag"(dynamic, depend on SQL Query) and "Content End Flag"(fixed, value is "result off")
 
