@@ -22,7 +22,7 @@
 
 **项目结构如下：**
 
-<img src="./img/1.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/maihttps://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/1.png"/>
 
 
 
@@ -47,7 +47,7 @@
 
 默认值如下：
 
-<img src="./img/3.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/3.png"/>
 
 </br>
 
@@ -55,7 +55,7 @@
 
 配置完毕后，使用命令 `python3 server.py` 运行主程序。这样就是跑起来了
 
-<img src="./img/2.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/2.png"/>
 
 注意一定要用 python 3.x 版本来运行主程序，建议使用 python 3.7。若使用 python 2 会有 Subprocess 和 Socket 连用 Socket 返回特别慢的bug。
 
@@ -67,7 +67,7 @@
 
 `/password/operation/code/sqlRandomString?x=file`
 
-<img src="./img/4.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/4.png"/>
 
 不管是什么操作都必须按照这个格式来发送，不然无法正常与程序交互
 
@@ -92,7 +92,7 @@ Content-Type: application/json
 
 
 
-<img src="./img/5.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/5.png"/>
 
 Request：
 
@@ -128,7 +128,7 @@ Response:
 
 **模拟场景**：客户端连接 Rogue Mysql Server:
 
-<img src="./img/6.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/6.png"/>
 
 其中 **连接端口** 为 “新建 Rogue Mysql Server实例” 请求中响应的 `msg` 字段，并且Sql语句中需要存在 `code+sqlRandomString` 的字符串。
 
@@ -148,7 +148,7 @@ Content-Type: application/json
 {"code": "1", "msg": "'xxxxx"}
 ```
 
-<img src="./img/7.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/7.png"/>
 
 **Request：**
 
@@ -174,7 +174,7 @@ Content-Type: application/json
 
 构造读取文件请求，如下，成功获取到客户端 `/var/www/html/config.txt` 文件内容
 
-<img src="./img/9.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/9.png"/>
 
 </br>
 
@@ -184,13 +184,13 @@ Content-Type: application/json
 
 构造读取文件请求，修改 `sqlRandomString` 使之与 SQL query 对应。如下，成功获取到客户端 `/var/www/html/config.txt` 文件新内容
 
-<img src="./img/10.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/10.png"/>
 
 </br>
 
 若 `code`+`sqlRandomString` 无法匹配到文件内容，将会返回整个文件内容，并且 `code` 为 2：
 
-<img src="./img/8.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/8.png"/>
 
 </br>
 
@@ -212,7 +212,7 @@ Content-Type: application/json
 {"code": "1", "msg": "destroied"}
 ```
 
-<img src="./img/12.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/12.png"/>
 
 **Request：**
 
