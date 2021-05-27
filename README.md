@@ -94,7 +94,7 @@ Content-Type: application/json
 
 <img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/5.png"/>
 
-Request：
+**Request：**
 
 1.  `operation` 设置为 **instantiate**
 2. `password` 需要和 `server.py` 中定义的一致
@@ -102,7 +102,7 @@ Request：
 4. `sqlRandomString` 虽然在这阶段没用，但**仍然需要发送**
 5. `file` 用于配置 Rogue Mysql Server，指定要读取的客户端文件路径。**只能设置一个文件，不支持多个**
 
-Response:
+**Response:**
 
 1. Rogue-MySql-Web-Server 将以 json 形式返回数据。字段只有两个：`code` 和 `msg`
 2. `code` 为  1 代表实例化成功，为 0 代表实例化失败
