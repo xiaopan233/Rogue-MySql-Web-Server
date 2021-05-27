@@ -22,7 +22,7 @@
 
 **项目结构如下：**
 
-<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/maihttps://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/1.png"/>
+<img src="https://github.com/xiaopan233/Rogue-MySql-Web-Server/blob/main/img/1.png"/>
 
 
 
